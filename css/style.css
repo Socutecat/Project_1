@@ -69,7 +69,6 @@ header {
 .new-list li:last-of-type{
 	margin-right: 0px;
 }
-
 .page{
 	position: relative;
 	overflow: hidden;
@@ -239,7 +238,6 @@ p.wrap{
 	p{
 		font-size: 19px;
 	}
-		
 }
 	/* media */
 @media(min-width:768px){
