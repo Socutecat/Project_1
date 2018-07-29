@@ -426,29 +426,27 @@ p.wrap{
 	cursor: pointer;
 	background-color:#fff;
 }
-.column-1 img{
-	margin-top: -200px;
-}
 .imac_scr{
 	position: relative;
+	margin-top: -160px;
 }
 .imac_scr .imac_scr2{
 	position: absolute;
 	overflow: hidden;
-	top:-175px;
-	left:3px;
-	right:3PX;
-	height:150px;
+	top:5%;
+	left:4%;
+	right:4%;
+	height:72%;
 }
 .imac_scr .imac_scr2 img{
 	position:absolute;
 	overflow:hidden;
 	transition:1s all linear;
-	transform: translateY(14.2%)
+	transform: translateY(1%)
    
 }
 .imac_scr .imac_scr2:hover img{
-	transform:translateY(-76.4%);
+	transform:translateY(-89%);
 	transition:5s all ease-in-out;
 }
 /* MEDIA */
@@ -456,19 +454,19 @@ p.wrap{
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:-182px;
-		left:3px;
-		right:3PX;
-		height:200px;
+		top:5%;
+		left:4%;
+		right:4%;
+		height:72%;
 	}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
 		overflow:hidden;
 		transition:1s all linear;
-		transform: translateY(11.2%)
+		transform: translateY(0.2%)
 	}
 	.imac_scr .imac_scr2:hover img{
-		transform:translateY(-76.4%);
+		transform:translateY(-89%);
 		transition:5s all ease-in-out;
 	}
 }
@@ -476,40 +474,46 @@ p.wrap{
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:-172px;
-		left:3px;
-		right:3PX;
-		height:262px;
+		top:5%;
+		left:4%;
+		right:4%;
+		height:72%;
 	}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
 		overflow:hidden;
 		transition:1s all linear;
-		transform: translateY(8%)
+		transform: translateY(1%)
 	}
 	.imac_scr .imac_scr2:hover img{
-		transform:translateY(-81.5%);
+		transform:translateY(-89%);
 		transition:5s all ease-in-out;
+	}
+	.imac_scr{
+		margin-top: -200px;
 	}
 }
 @media(min-width:1200px){
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:-166px;
-		left:9px;
-		right:9px;
-		height:315px;
+		top:5%;
+		left:4%;
+		right:4%;
+		height:72%;
 	}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
 		overflow:hidden;
 		transition:1s all linear;
-		transform: translateY(7.1%)
+		transform: translateY(0.1%)
 	}
 	.imac_scr .imac_scr2:hover img{
-		transform:translateY(-81.5%);
+		transform:translateY(-89%);
 		transition:5s all ease-in-out;
+	}
+	.imac_scr{
+		margin-top: -200px;
 	}
 }
 /* section portfolio */
