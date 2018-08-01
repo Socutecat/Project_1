@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,hight-device-height initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
 	<meta name="format-direction" content="telephon-no">    
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>my site</title>
@@ -153,7 +153,39 @@
 				<p>In auctor ex id urna faucibus porttitor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In maximus ligula semper metus pellentesque mattis. Maecenas  volutpat, diam enim sagittis quam, id porta quam. Sed id dolor consectetur fermentum nibh volutpat, accumsan purus.</p>
 			</div>	
 		</div>
+		<div class="button-group filter-button-group">
+			<button class="button is-checked" data-filter="*">Show all</button>
+			<button class="button" data-filter=".branding">Branding</button>
+			<button class="button" data-filter=".design">Design</button>
+			<button class="button" data-filter=".photography">Photography</button>			
+		</div>	
+		<div class="grid">
+			<div class="grid-item branding">
+					<img src="img/portfolio1.png" alt="projects">
+			</div>
+			<div class="grid-item design">
+					<img src="img/portfolio2.png" alt="projects">
+			</div>
+			<div class="grid-item branding">
+					<img src="img/portfolio3.png" alt="projects">
+			</div>
+			<div class="grid-item photography">
+					<img src="img/portfolio4.png" alt="projects">
+			</div>
+			<div class="grid-item design">
+				<img src="img/portfolio5.png" alt="projects">
+			</div>
+			<div class="grid-item photography">
+				<img src="img/portfolio6.png" alt="projects">
+			<!-- </div> -->
+		</div>
 	</section>
-
+</div>
+<!-- Jquery -->
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<!-- Isotope -->
+<script src="scripts/isotope.pkgd.min.js"></script>
+<!-- site scripts -->
+<script src="scripts/scripts.js"></script>		
 	</body>
 </html>

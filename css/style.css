@@ -150,6 +150,7 @@ p.wrap{
 .row{
 	margin-right: -15px;
 	margin-left: -15px;
+	margin-bottom: -20px;
 }
 .row::after{
 	content: '';
@@ -160,6 +161,7 @@ p.wrap{
 	width: 100%;
 	padding-left: 15px;
 	padding-right: 15px;
+	margin-bottom: 20px
 }
 .description blockquote{
 	font-size: 24px;
@@ -454,10 +456,6 @@ p.wrap{
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:5%;
-		left:4%;
-		right:4%;
-		height:72%;
 	}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
@@ -474,17 +472,13 @@ p.wrap{
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:5%;
-		left:4%;
-		right:4%;
-		height:72%;
-	}
+		}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
 		overflow:hidden;
 		transition:1s all linear;
 		transform: translateY(1%)
-	}
+		}
 	.imac_scr .imac_scr2:hover img{
 		transform:translateY(-89%);
 		transition:5s all ease-in-out;
@@ -497,10 +491,6 @@ p.wrap{
 	.imac_scr .imac_scr2{
 		position: absolute;
 		overflow: hidden;
-		top:5%;
-		left:4%;
-		right:4%;
-		height:72%;
 	}
 	.imac_scr .imac_scr2 img{
 		position:absolute;
@@ -516,19 +506,85 @@ p.wrap{
 		margin-top: -200px;
 	}
 }
+.invert *{
+	color: white;
+}
+.invert p {
+	opacity: 0.7;
+}
 /* section portfolio */
 .portfolio{
 	padding-top: 140px;
 }
+
 .portfolio-design{
 	text-align: center;
 }
+
 .portfolio-design h2{
 	letter-spacing: 0.5em;
 	padding-bottom: 81px;
-}    
+}
+
 .portfolio-design p{
 	line-height: 26px;
-	font-size: 15px;
+	font-size: 16px;
 	font-weight:300;
+	margin-bottom: 80px;
+}
+
+.grid{
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.grid-item{
+	width: 100%;
+	filter: grayscale(1);
+	transition: 0.2s;
+}
+
+.grid-item:hover{
+	filter: grayscale(0);
+}
+
+.button-group{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-left: 150px;
+	padding-right: 150px;
+	margin-bottom: -20px;
+	width: 100%;
+	padding-bottom: 50px;
+}
+
+.button-group button:hover{
+	opacity: 1;
+}
+
+.button-group button{
+	display: inline-block;
+	text-transform: uppercase;
+	background-color: #fff;
+	font-size: 16px;
+	font-family: "Dosis", "sans-serif";
+	font-weight: 400;
+	letter-spacing: 0.4em;
+	cursor: pointer;
+	border: none;
+	outline: none;
+	opacity: 0.7;
+	margin-bottom: 20px;
+}
+/* media for section portfolio */
+@media(min-width:544px){
+	.grid-item{
+		width: 50%;
+	}
+}
+@media(min-width:992px){
+	.grid-item{
+		width: 33.3334%;
+	}
 }
