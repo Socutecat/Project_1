@@ -477,7 +477,6 @@ p.wrap{
 	overflow:hidden;
 	transition:1s all linear;
 	transform: translateY(1%)
-   
 }
 .imac_scr .imac_scr2:hover img{
 	transform:translateY(-89%);
@@ -541,12 +540,13 @@ p.wrap{
 .invert *{
 	color: white;
 }
-.invert p,
-.invert q {
+.invert p{
 	opacity: 0.7;
 }
-
-.inver cite{
+.invert q{
+	opacity: 1;
+}
+.invert cite{
 	opacity: 0.3;
 }
 /* section portfolio */
@@ -829,6 +829,7 @@ p.wrap{
 	margin-right: 8px;
 	position: relative;
 	z-index: 1000;
+	margin-top: 110px;
 }
 
 .owl-carousel .owl-dots .active span{
@@ -852,7 +853,7 @@ p.wrap{
 /* google map */
  #map{
 	width: 100%;
-	height: 400px;
+	height: 410px;
 }
 
 .relative{
@@ -862,7 +863,11 @@ p.wrap{
 .overflow-hidden{
 	overflow: hidden;
 }
-
+.map-overlay-title{
+	position: absolute;
+	top:50%;
+	left:50%;
+}
 .map-overlay{
 	position: absolute;
 	top: 0;
@@ -877,41 +882,56 @@ p.wrap{
 	visibility: hidden;
 }
 
-
-
-.map-overlay h3{
-	position: absolute;
-	top:50%;
-	left: 50%;
+.map-overlay-title h3{
 	transform: translate(-50%, -50%);
 	color: #fefefe;
-	/* border-bottom: 1px solid transparent; */
-	transition: 0.3s;	
+	border-bottom: 1px solid transparent;
+	transition: 0.2s;	
 	text-align: center;
-	letter-spacing: 0.5em;
+	letter-spacing: 0.1em;
+	padding-left: 15px;
+}
 
+.map-overlay-title h3::after{
+	content:'\f107';
+	font-family: 'FontAwesome';
+	font-size: 16px;
+	color: #ffffff;
+	padding-left: 15px;
 }
 
 
-.map-overlay h3:hover{
-	/* border-bottom-color: white; */
+.map-overlay-title h3:hover{
+	border-bottom-color: white;
 	cursor: pointer;
 }
 
-.map-overlay h3::before{
-	content: '';
-	position: absolute;
-	left:50%;
-	right:50%;
-	width:0;
-	background-color: currentColor;
-	transition: 0.3s;
-	height: 2px;
-	bottom: -5px;
-} 
+.map-overlay-title span{
+	transform: translate(-50%, -50%) rotate(45deg);
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-color:#ffffff;
+	text-align: center;
+	margin-bottom: 30px;
+}
 
-.map-overlay h3:hover::before{
-	left:0;
-	right:0;
-	width:100%;
+.map-overlay-title span::before{
+	content: '\f041';
+	font-family: 'FontAwesome';
+	font-size: 25px;
+	position: absolute;
+	z-index: 1000;
+	color: #111111;
+	transform:translate(50%,50%) rotate(-45deg);
+	top: -18%;
+	left: 39%;
+	right: 66%;
+	bottom: 27%;
+}
+/* media section map */
+@media(min-width:545px){
+	.map-overlay-title h3{
+		letter-spacing: 0.5em;
+	}
 }
