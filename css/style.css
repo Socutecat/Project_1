@@ -21,15 +21,17 @@ body{
 	color: #777777;
 }
 
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css");
+
 input, textarea {
 	resize: none;
-	border: 1px solid #dfdfdf;	
+	border: 1px solid #dfdfdf;
 	padding: 4px 12px;
 	border-radius: 1px;
 	/* width: 130px;
 	height: 45px; */
 	text-transform: uppercase;
-	font-family: 'OpenSans';
+	font-family: 'OpenSans' sans-serif;
 	font-size: 11px;
 	line-height: 26px;
 	letter-spacing: 0.2em;
@@ -104,6 +106,12 @@ header {
 	opacity: 0.75;
 	font-size: 11px;
 	letter-spacing: 0.3em;
+	transition: .2s;
+}
+
+.new-list li a:hover{
+	color: #636363;
+
 }
 .new-list li:last-of-type{
 	margin-right: 0px;
@@ -680,6 +688,7 @@ p.wrap{
 .our-works{
 	text-align: center;
 	margin-top: 70px;
+	padding: 0 15px;
 
 }
 .our-works h2{
@@ -813,6 +822,7 @@ p.wrap{
 	text-transform: uppercase;
 	display: block;
 	margin-top: 20px;
+
 }
 
 .owl-carousel {
@@ -823,7 +833,7 @@ p.wrap{
 	bottom: 50%;
 /*	top: 0px;
 	bottom: 60px;
-	margin: auto;*/	
+	margin: auto;*/
 	display: none;
 }
 
@@ -875,8 +885,8 @@ p.wrap{
 
 .owl-carousel .owl-dots span{
 	display: block;
-	width: 12px;
-	height:12px;
+	width: 8px;
+	height:8px;
 	border-radius: 50%;
 	background-color: #ffffff;
 	margin-right: 8px;
@@ -1010,7 +1020,8 @@ p.wrap{
 
 .our-news .all-news{
 	font-size: 11px;
-	color: #e5e5e5;
+	color:#111111;
+	opacity: 0.7;
 	background-color: #fff;
 	letter-spacing: 0.16em;
 	text-transform: uppercase;
@@ -1026,7 +1037,7 @@ p.wrap{
 
 .our-news .all-news::after{
 	content:'\f105';
-	font-family: 'FontAwesome' sans-serif;
+	font-family:'FontAwesome';
 	font-size: 11px;
 	color: #111111;
 	padding-left: 5px;
@@ -1157,6 +1168,9 @@ p.wrap{
 	margin-bottom: 20px;
 }
 
+/* end */
+
+
 /*Section contacts*/
 .form-wrapper {
 	display: -ms-flexbox;
@@ -1187,8 +1201,10 @@ p.wrap{
 }
 
 .form-subscribe p::before{
-	content: '\f105a';
-	font-family: 'FontAwesome' sans-serif;
+
+		content: "\f05a";
+
+	font-family:'FontAwesome';
 	display: inline-block;
 	font-size: 11px;
 	margin-right: 5px;
@@ -1210,7 +1226,7 @@ p.wrap{
 	.owl-carousel .owl-nav button {
 		display: block;
 	}
-} 
+}
 
 .our-contact{
 	padding-top: 70px;
@@ -1337,12 +1353,12 @@ p.wrap{
 }
 
 .our-contact__wrapper p {
-	font-size: 11px;	
+	font-size: 11px;
 }
 
 .our-contact__wrapper p::before{
-	content: '\f105a';
-	font-family: 'FontAwesome';
+	content: "\f05a";
+	font-family:'FontAwesome';
 	font-size: 11px;
 	margin-right: 5px;
 }
@@ -1399,7 +1415,6 @@ p.wrap{
 		align-items: flex-start;
 		margin: 0 auto;
 	}
-
 	.text-wrapper{
 		margin-bottom: none;
 	}
@@ -1414,7 +1429,144 @@ p.wrap{
 		margin-bottom: 100px;
 	}
 }
+
 /* end section contacts */
+
+/* footer */
+.padding-135-60{
+	padding-top: 70px;
+	padding-bottom: 30px;
+}
+
+.background-white{
+	background-color: #f8f8f8;
+}
+
+footer .footer-icon-services{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-icon-services .width-100{
+	width: auto;
+	margin-bottom: 30px;
+}
+
+.social,.social-icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+footer .social-icon{
+	width: 25px;
+	height: 25px;
+	border: 1px solid #636363;
+	border-radius: 3px;
+	transform: rotate(45deg);
+	margin: 0 10px;
+	transition: .3s;
+	margin-bottom: 50px;
+	text-decoration: none;
+}
+
+.social .social-icon i{
+	transform: rotate(-45deg);
+	color: #111111;
+}
+
+footer .social-icon:hover{
+	background-color:#b9b9b9;
+	transition: all .2s ease-in-out;
+}
+/* footer-p */
+
+.footer-p{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.footer-p .footer-text{
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	line-height: 24px;
+	display: inline-block;
+}
+
+.footer-p .footer-span{
+	font-size: 11px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 24px;
+	color: #999999;
+	display: inline-block;
+}
+
+/* media for footer */
+
+@media(min-width:768px){
+	.padding-135-60{
+		padding-top: 135px;
+		padding-bottom: 60px;
+	}
+}
+
+
+/* /* totop-button */
+
+.totop-button{
+	position: fixed;
+	right: 30px;
+	bottom:30px;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-bottom: 20px solid #c6c6c6;
+	z-index: 1000;
+	transition: .3s;
+	border-radius: 3px;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.totop-button:hover{
+	cursor: pointer;
+	border-bottom-color: #111;
+}
+
+.totop-button.show{
+	opacity: 1;
+	visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* .margin-bottom-100 h2{
 	margin-bottom: 100px;
 }

@@ -29,7 +29,7 @@ function initMap() {
   // The map, centered at Uluru
   var map = new google.maps.Map(
       document.getElementById('map'), {
-				zoom: 12, 
+				zoom: 12,
 				center: uluru,
 				styles:[
 					{
@@ -229,9 +229,27 @@ var mapTitle =$ ('.map-title'),
 		});
 	}
 
+function to_top(){
+	var btn = $ ('.totop-button');
+		$(window).scroll (function(){
+			if ($(window).scrollTop() > 300){
+				btn.addClass('show');
+			}
+			else{
+				btn.removeClass('show');
+			}
+		});
+
+		btn.on('click', function(e) {
+				e.preventDefault();
+				$('html, body').animate({scrollTop:0}, '300');
+		});
+}
 
 $(document).ready(function(){
 	isotope_init();
 	carousel_init();
 	mapOverlatHidden();
+	to_top()
+
 });
