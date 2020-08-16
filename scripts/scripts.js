@@ -20,6 +20,7 @@ function carousel_init() {
 		nav:true,
 		loop:true,
 		dots:true,
+		autoplay:true,
 	});
 }
 
@@ -250,6 +251,47 @@ $(document).ready(function(){
 	isotope_init();
 	carousel_init();
 	mapOverlatHidden();
-	to_top()
+	to_top();
 
 });
+
+
+function toggleClass(clickTarget, classTarget, className){
+	var clickTargetVariable = document.querySelector(clickTarget),
+		classTargetVariable = document.querySelector(classTarget);
+
+	function clickListener(){
+		event.stopPropagation();
+		this.classList.toggle('toggle-active');
+		classTargetVariable.classList.toggle(className);
+	}
+
+	clickTargetVariable.addEventListener('click', clickListener);
+
+	document.addEventListener('click', function(e){
+
+		if (e.target.closest(classTarget)){
+			return;
+		}
+
+		if (classTargetVariable.classList.contains(className)){
+			classTargetVariable.classList.remove(className);
+			clickTargetVariable.classList.remove('toggle-active');
+		}
+	});
+}
+toggleClass('.toggle-button', '.header-inner', 'header-inner-open');
+
+const btn = document.querySelector('.scroll-to')
+
+const smoothScroll = (h) => {
+  let i = h || 0;
+  if (i < 936) {
+    setTimeout(() => {
+      window.scrollTo(0, i);
+      smoothScroll(i + 10);
+    }, 10);
+  }																				
+}
+
+btn.addEventListener('click', () => smoothScroll());
