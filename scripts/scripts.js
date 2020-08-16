@@ -282,7 +282,7 @@ function toggleClass(clickTarget, classTarget, className){
 }
 toggleClass('.toggle-button', '.header-inner', 'header-inner-open');
 
-const btn = document.querySelector('.scroll-to')
+const btn = document.querySelector('.scroll-to');
 
 const smoothScroll = (h) => {
   let i = h || 0;
